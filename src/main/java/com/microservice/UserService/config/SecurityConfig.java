@@ -162,6 +162,7 @@ import org.springframework.security.web.util.matcher.MediaTypeRequestMatcher;
                                 .map(c -> c.replaceFirst("^ROLE_", ""))
                                 .collect(Collectors.collectingAndThen(Collectors.toSet(), Collections::unmodifiableSet));
                         claims.put("roles", roles);
+                        //claims.put("any_other_details", ***);
                     });
                 }
             };
