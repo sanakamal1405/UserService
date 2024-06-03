@@ -168,5 +168,45 @@ import org.springframework.security.web.util.matcher.MediaTypeRequestMatcher;
             };
         }
 
+
+        /*
+
+        TOKEN PAYLOAD WITHOUT PUTTING "roles" in CLAIMS
+        {
+            "sub": "user",
+            "aud": "scaler",
+            "nbf": 1717423801,
+            "scope": [
+                    "ADMIN"
+                      ],
+            "iss": "http://localhost:8080",
+            "exp": 1717424101,
+            "iat": 1717423801,
+            "jti": "01ed5cd0-106d-4dbd-8e5e-4bfbd692189f"
+        }
+
+
+
+        TOKEN PAYLOAD AFTER PUTTING "roles" in CLAIMS
+
+         {
+                "sub": "user",
+                "aud": "scaler",
+                "nbf": 1717427137,
+                "scope": [
+                        "ADMIN"
+                            ],
+                "roles": [],                // at this point no entry was there in user_role mapping table
+                "iss": "http://localhost:8080",
+                "exp": 1717427437,
+                "iat": 1717427137,
+                "jti": "28214a65-17ee-4718-9440-719e89292b88"
+        }
+
+
+
+        */
+
+
     }
 
